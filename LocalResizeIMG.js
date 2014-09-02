@@ -54,7 +54,7 @@
                 // 修复IOS
                 if( navigator.userAgent.match(/iphone/i) ) {
                     var mpImg = new MegaPixImage(img);
-                    mpImg.render(canvas, { maxWidth: w, maxHeight: h, quality: obj.quality || 0.8, orientation: 6 });
+                    mpImg.render(canvas, { maxWidth: w, maxHeight: h, quality: obj.quality || 0.8});
                     base64 = canvas.toDataURL('image/jpeg', obj.quality || 0.8 );
                 }
 
@@ -66,7 +66,6 @@
 
                 // 生成结果
                 var result = {
-                    blob: blob,
                     base64 : base64,
                     clearBase64: base64.substr( base64.indexOf(',') + 1 )
                 };

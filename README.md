@@ -16,7 +16,7 @@ LocalResizeIMG
 
 ## BUG修复 1.1
 * 修复某些网友反映IOS图片方向不对的问题。（说出原因估计会被打死.. 因为我写错参数了..）
-* 增加 `angularJs` 支持，双向绑定方式哦。
+* 增加 `angularJs` 支持，双向绑定方式。
 
 ![图1](http://think2011.qiniudn.com/LocalResizeIMG1.gif)
 

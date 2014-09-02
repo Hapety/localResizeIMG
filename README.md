@@ -41,8 +41,6 @@ LocalResizeIMG
 1. 引入 `patch/angular-localResizeIMG.js`
 2. 直接看代码吧。
 ```coffeescript
-    调用
-	---------------------------
 	# js（coffeescript版）
 	app = angular.module 'app', ['localResizeIMG']
 

@@ -47,6 +47,7 @@ do ->
             return false
 
           convertImgToBase64 newVal, (base64) ->
+            scope.$apply ->
               scope.ngModel =
                 base64     : base64
                 clearBase64: base64.substr base64.indexOf(',') + 1

@@ -50,10 +50,12 @@
               return false;
             }
             return convertImgToBase64(newVal, function(base64) {
-              return scope.ngModel = {
-                base64: base64,
-                clearBase64: base64.substr(base64.indexOf(',') + 1)
-              };
+              return scope.$apply(function() {
+                return scope.ngModel = {
+                  base64: base64,
+                  clearBase64: base64.substr(base64.indexOf(',') + 1)
+                };
+              });
             });
           });
         }

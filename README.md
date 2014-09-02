@@ -51,7 +51,7 @@ LocalResizeIMG
 
 demo
 ---
-具体详情请查看 源代码，或者 [demo](http://think2011.github.io/LocalResizeIMG/)。
+具体详情请查看 源代码，或者 [demo](http://think2011.github.io/localResizeIMG/)。
 
 ## PS
 这是8个月前的测试文章的延伸，[点我去看看](http://my.oschina.net/hzplay/blog/160806)。

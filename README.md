@@ -37,6 +37,7 @@ LocalResizeIMG
 	 });
 ```
 
+
 ## 使用方法-angularjs
 1. 引入 `patch/angular-localResizeIMG.js`
 2. 直接看代码吧。
@@ -48,6 +49,7 @@ LocalResizeIMG
 	<button local-resize-img l-width="300" l-quality="0.7" ng-model="pic">上传</button>
 	<img ng-src="pic.base64" />
 ```
+
 
 demo
 ---

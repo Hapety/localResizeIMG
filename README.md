@@ -18,6 +18,14 @@ LocalResizeIMG
 * 修复某些网友反映IOS图片方向不对的问题。（说出原因估计会被打死.. 因为我写错参数了..）
 * 增加 `angularJs` 支持，双向绑定方式。
 
+## 关于IOS下图片方向不对的问题
+> FAQ
+Q. Photos from iPhone is rotated and not in correct orientation.
+A. Orientation of jpeg file is recorded in EXIF format. This library won't detect exif information automatically. To detect the information in JavaScript, use exif.js (https://github.com/jseidelin/exif-js).
+
+以上是采用的修复IOS Bug的插件中的说明，大意的解决办法是使用 `exif.js` 目前木有精力去修复，愿意帮忙的朋友可以 PR 本库。
+
+
 ![图1](http://think2011.qiniudn.com/LocalResizeIMG1.gif)
 
 

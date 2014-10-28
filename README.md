@@ -1,4 +1,4 @@
-# 已更新版本，看这里。[localResizeIMG-2](https://github.com/think2011/localResizeIMG-2)
+# 已更新版本，看这里。[localResizeIMG-2](http://think2011.github.io/localResizeIMG-2/)
 
 
 

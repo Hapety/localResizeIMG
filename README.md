@@ -1,7 +1,7 @@
-LocalResizeIMG
-==============
-
 # 已更新版本，看这里。[localResizeIMG-2](https://github.com/think2011/localResizeIMG-2)
+
+
+
 
 ## 前端HTML5本地压缩图片，兼容移动设备IOS,android。
 

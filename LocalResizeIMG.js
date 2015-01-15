@@ -8,17 +8,19 @@
      * @example
      *
      */
-    $.fn.localResizeIMG = function (obj) {
-        this.on('change', function () {
+    $.fn.localResizeIMG = function(obj) {
+        this.on('change', function() {
             var file = this.files[0];
-            var URL = URL || webkitURL;
+            var URL = window.URL || window.webkitURL;
             var blob = URL.createObjectURL(file);
 
             // 执行前函数
-            if($.isFunction(obj.before)) { obj.before(this, blob, file) };
+            if ($.isFunction(obj.before)) {
+                obj.before(this, blob, file)
+            };
 
             _create(blob, file);
-            this.value = '';   // 清空临时数据
+            this.value = ''; // 清空临时数据
         });
 
         /**
@@ -29,7 +31,7 @@
             var img = new Image();
             img.src = blob;
 
-            img.onload = function () {
+            img.onload = function() {
                 var that = this;
 
                 //生成比例
@@ -42,32 +44,39 @@
                 //生成canvas
                 var canvas = document.createElement('canvas');
                 var ctx = canvas.getContext('2d');
-                $(canvas).attr({width : w, height : h});
+                $(canvas).attr({
+                    width: w,
+                    height: h
+                });
                 ctx.drawImage(that, 0, 0, w, h);
 
                 /**
                  * 生成base64
                  * 兼容修复移动设备需要引入mobileBUGFix.js
                  */
-                var base64 = canvas.toDataURL('image/jpeg', obj.quality || 0.8 );
+                var base64 = canvas.toDataURL('image/jpeg', obj.quality || 0.8);
 
                 // 修复IOS
-                if( navigator.userAgent.match(/iphone/i) ) {
+                if (navigator.userAgent.match(/iphone/i)) {
                     var mpImg = new MegaPixImage(img);
-                    mpImg.render(canvas, { maxWidth: w, maxHeight: h, quality: obj.quality || 0.8});
-                    base64 = canvas.toDataURL('image/jpeg', obj.quality || 0.8 );
+                    mpImg.render(canvas, {
+                        maxWidth: w,
+                        maxHeight: h,
+                        quality: obj.quality || 0.8
+                    });
+                    base64 = canvas.toDataURL('image/jpeg', obj.quality || 0.8);
                 }
 
                 // 修复android
-                if( navigator.userAgent.match(/Android/i) ) {
+                if (navigator.userAgent.match(/Android/i)) {
                     var encoder = new JPEGEncoder();
-                    base64 = encoder.encode(ctx.getImageData(0,0,w,h), obj.quality * 100 || 80 );
+                    base64 = encoder.encode(ctx.getImageData(0, 0, w, h), obj.quality * 100 || 80);
                 }
 
                 // 生成结果
                 var result = {
-                    base64 : base64,
-                    clearBase64: base64.substr( base64.indexOf(',') + 1 )
+                    base64: base64,
+                    clearBase64: base64.substr(base64.indexOf(',') + 1)
                 };
 
                 // 执行后函数
@@ -78,7 +87,7 @@
 
 
     // 例子
-/*
+    /*
     $('input:file').localResizeIMG({
         width: 100,
         quality: 0.1,

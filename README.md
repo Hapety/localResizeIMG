@@ -1,4 +1,4 @@
-# 本库不再维护，已更新更适合的版本。[localResizeIMG3](http://think2011.github.io/localResizeIMG3/)
+## 本库不再维护，已更新更适合的版本。[lrz3](https://github.com/think2011/localResizeIMG3)
 
 
 
